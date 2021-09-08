@@ -7,8 +7,8 @@ const db=knex({
     client: 'mysql2',
     connection: {
         host: 'localhost',
-        user: 'root',
-        password: 'BvkvpFGQYTD23xDw',
+        user: 'your-user',
+        password: 'your-password',
         database: 'Bosta'
     }
 });

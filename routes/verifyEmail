@@ -6,8 +6,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'bostatask63@gmail.com',
-        pass: 'bosta63@task'
+        user: 'your-email',
+        pass: 'your-password'
     }
 });
 
@@ -16,7 +16,7 @@ router.post('/VerifyEmail', (req, res) => {
     const uuid = uuidv4();
 console.log("here")
     const options = {
-        from: "bostatask63@gmail.com",
+        from: "your-email",
         to: email,
         subject: "Bosta verification Code",
         text: `Dear user Please verify your email by entering this ID :  ${uuid}`
@@ -29,7 +29,7 @@ router.post('/VerifyEmail', (req, res) => {
     const uuid = uuidv4();
     console.log("here")
     const options = {
-        from: "bostatask63@gmail.com",
+        from: "your-email",
         to: email,
         subject: "Bosta verification Code",
         text: `Dear user Please verify your email by entering this ID :  ${uuid}`

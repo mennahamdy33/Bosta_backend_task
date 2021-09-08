@@ -7,8 +7,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'bostatask63@gmail.com',
-        pass: 'bosta63@task'
+        user: 'your-email',
+        pass: 'your-password'
     },
     tls: {
         rejectUnauthorized: false
@@ -40,7 +40,7 @@ router.post('/signUp', async (req, res) => {
 
                 uuid = uuidv4();
                 options = {
-                    from: "bostatask63@gmail.com",
+                    from: "your-email",
                     to: info.email,
                     subject: "Bosta verification Code",
                     text: `Dear user Please verify your email by entering this ID :  ${uuid}`
