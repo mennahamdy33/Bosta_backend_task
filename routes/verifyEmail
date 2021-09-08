@@ -1,0 +1,42 @@
+const express = require("express");
+const router = express.Router();
+const db = require('../db/config')
+const { v4: uuidv4 } = require('uuid');
+const nodemailer = require("nodemailer");
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'bostatask63@gmail.com',
+        pass: 'bosta63@task'
+    }
+});
+
+router.post('/VerifyEmail', (req, res) => {
+    const email = req.body.email;
+    const uuid = uuidv4();
+console.log("here")
+    const options = {
+        from: "bostatask63@gmail.com",
+        to: email,
+        subject: "Bosta verification Code",
+        text: `Dear user Please verify your email by entering this ID :  ${uuid}`
+    };
+
+
+});
+router.post('/VerifyEmail', (req, res) => {
+    const email = req.body.email;
+    const uuid = uuidv4();
+    console.log("here")
+    const options = {
+        from: "bostatask63@gmail.com",
+        to: email,
+        subject: "Bosta verification Code",
+        text: `Dear user Please verify your email by entering this ID :  ${uuid}`
+    };
+
+
+});
+
+
+module.exports = router;
